@@ -67,6 +67,7 @@ main{
     margin: auto;
     background-color: white;
     border-radius: 0 0 10px 10px;
+    margin-bottom: 10rem;
 }
 #ImgOnda{
     height: 70dvh;
@@ -99,7 +100,7 @@ main{
         width: 70%;
         height: 80%;
         h2{
-            color: #007746;
+            color: rgb(171, 90, 248);
             font-size: 2rem;
         }
         figure{
@@ -115,7 +116,7 @@ main{
         li{
             margin-left: 2rem;
             strong{
-                color: #007746;
+                color: rgb(171, 90, 248);
             }
         }
         p a{
@@ -240,11 +241,20 @@ main{
     }
 }
 #FreqCompOnda{
+    opacity: 0;
     display: flex;
+    visibility: hidden;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 0;
     gap: 2rem;
+    transition: opacity 0.5s, height 0.5s;
+}
+#FreqCompOnda.visivel{
+    opacity: 1;
+    visibility: visible;
+    height: 70dvh;
 }
 #LuzComp{
     display: flex;
@@ -278,9 +288,46 @@ main{
         align-items: center;
     }
 }
+.sobreondas{
+    width: 100%;
+    height: 85dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    picture{
+        width: 50%;
+        height: 50%;
+        img{
+            height: 100%;
+        }
+    }
+    div{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+        width: 60%;
+    }
+    h2{
+        color: rgb(171, 90, 248);
+   }
+   p{
+    text-indent: 2rem;
+   }
+   a{
+    text-decoration: underline;
+    color: rgb(171, 90, 248);
+    font-weight: bold;
+   }
+}
 footer{
     height: 10dvh;
     margin-top: 3rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
